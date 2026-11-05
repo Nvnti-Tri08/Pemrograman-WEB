@@ -1,3 +1,4 @@
+
 /* Mengatur seluruh halaman */
 * {
     margin: 0;
@@ -6,8 +7,9 @@
 }
 
 body {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #f4f6fb;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #E9DFD0;
     min-height: 100vh;
 
     display: flex;
@@ -15,27 +17,27 @@ body {
     align-items: center;
 }
 
-/* kotak utama */
+/* Kotak utama */
 .container {
     width: 500px;
     padding: 30px;
-    background-color: white;
+    background-color: #D2BDA5;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(58, 52, 48, 0.15);
 }
 
 h1 {
-    color: #2563eb;
+    color: #8C493D;
     margin-bottom: 10px;
 }
 
 p {
-    color : #666;
+    color: #3A3430;
     margin-bottom: 25px;
 }
 
-/* form pencarian */
+/* Form pencarian */
 form {
     display: flex;
     gap: 10px;
@@ -44,39 +46,41 @@ form {
 input {
     flex: 1;
     padding: 12px;
-    border: 1px solid #ccc;
+    background-color: #F5EFE6;
+    color: #3A3430;
+    border: 1px solid #B89B80;
     border-radius: 8px;
     outline: none;
 }
 
+input:focus {
+    border-color: #B86B50;
+}
+
 button {
     padding: 12px 20px;
-    background-color: #2563eb;
-    color: white;
+    background-color: #B86B50;
+    color: #FFFFFF;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #1d4ed8;
+    background-color: #8C493D;
 }
 
-#result {
-    margin-top: 25px;
-}
-
-
-/* Tampilan hasil profil */
 #result {
     margin-top: 30px;
     text-align: center;
 }
 
+/* Tampilan hasil profil */
 .profile-card {
     padding: 25px;
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
+    background-color: #F5EFE6;
+    border: 1px solid #D2BDA5;
     border-radius: 15px;
 }
 
@@ -86,15 +90,16 @@ button:hover {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
+    border: 3px solid #B86B50;
 }
 
 .profile-card h2 {
-    color: #1e293b;
+    color: #3A3430;
     margin-bottom: 8px;
 }
 
 .profile-card .bio {
-    color: #64748b;
+    color: #75675C;
     margin-bottom: 20px;
 }
 
@@ -106,23 +111,25 @@ button:hover {
 }
 
 .profile-info div {
-    background-color: white;
+    background-color: #E9DFD0;
+    color: #3A3430;
     padding: 12px;
     border-radius: 10px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #D2BDA5;
 }
 
 .profile-card a {
     display: inline-block;
     padding: 10px 18px;
-    background-color: #2563eb;
+    background-color: #B86B50;
     color: white;
     text-decoration: none;
     border-radius: 8px;
+    transition: 0.3s;
 }
 
 .profile-card a:hover {
-    background-color: #1d4ed8;
+    background-color: #8C493D;
 }
 
 /* Tampilan HP */
@@ -143,7 +150,7 @@ button:hover {
 
 .loading {
     margin-top: 20px;
-    color: #6c63ff;
+    color: #8C493D;
     font-weight: bold;
 }
 
