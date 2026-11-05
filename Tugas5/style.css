@@ -1,5 +1,5 @@
 
-/* Mengatur seluruh halaman */
+/* ===== Pengaturan Seluruh Halaman ===== */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@ body {
     align-items: center;
 }
 
-/* Kotak utama */
+/* ===== Container Utama ===== */
 .container {
     width: 500px;
     padding: 30px;
@@ -37,7 +37,7 @@ p {
     margin-bottom: 25px;
 }
 
-/* Form pencarian */
+/* ===== Form Pencarian ===== */
 form {
     display: flex;
     gap: 10px;
@@ -71,12 +71,18 @@ button:hover {
     background-color: #8C493D;
 }
 
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ===== Hasil Pencarian ===== */
 #result {
     margin-top: 30px;
     text-align: center;
 }
 
-/* Tampilan hasil profil */
+/* ===== Kartu Profil ===== */
 .profile-card {
     padding: 25px;
     background-color: #F5EFE6;
@@ -103,6 +109,7 @@ button:hover {
     margin-bottom: 20px;
 }
 
+/* ===== Informasi Profil ===== */
 .profile-info {
     display: flex;
     justify-content: center;
@@ -111,18 +118,19 @@ button:hover {
 }
 
 .profile-info div {
+    padding: 12px;
     background-color: #E9DFD0;
     color: #3A3430;
-    padding: 12px;
-    border-radius: 10px;
     border: 1px solid #D2BDA5;
+    border-radius: 10px;
 }
 
+/* ===== Tombol Profil GitHub ===== */
 .profile-card a {
     display: inline-block;
     padding: 10px 18px;
     background-color: #B86B50;
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     border-radius: 8px;
     transition: 0.3s;
@@ -132,7 +140,14 @@ button:hover {
     background-color: #8C493D;
 }
 
-/* Tampilan HP */
+/* ===== Loading ===== */
+.loading {
+    margin-top: 20px;
+    color: #8C493D;
+    font-weight: bold;
+}
+
+/* ===== Responsive Design ===== */
 @media (max-width: 550px) {
     .container {
         width: 90%;
@@ -146,15 +161,4 @@ button:hover {
     .profile-info {
         gap: 10px;
     }
-}
-
-.loading {
-    margin-top: 20px;
-    color: #8C493D;
-    font-weight: bold;
-}
-
-button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
 }

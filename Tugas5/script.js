@@ -1,8 +1,10 @@
 
+// Mengambil elemen dari HTML
 const form = document.getElementById("searchForm");
 const result = document.getElementById("result");
 
-form.addEventListener("submit", function(event) {
+// Menjalankan pencarian saat form dikirim
+form.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const username = document.getElementById("username").value.trim();
@@ -15,6 +17,7 @@ form.addEventListener("submit", function(event) {
     cariUser(username);
 });
 
+// Fungsi untuk mencari profil GitHub
 async function cariUser(username) {
     const button = form.querySelector("button");
 
@@ -28,21 +31,20 @@ async function cariUser(username) {
             `https://api.github.com/users/${username}`
         );
 
-        // Jika username tidak ditemukan
+        // Mengecek apakah username ditemukan
         if (response.status === 404) {
             result.innerHTML = "User tidak ditemukan!";
             return;
         }
 
-        // Jika terjadi kesalahan HTTP lainnya
         if (!response.ok) {
             throw new Error("Gagal mengambil data dari GitHub");
         }
 
-        // Mengubah respons menjadi JSON
+        // Mengubah data menjadi JSON
         const data = await response.json();
 
-        // Menampilkan data profil
+        // Menampilkan informasi profil pengguna
         result.innerHTML = `
             <div class="profile-card">
                 <img src="${data.avatar_url}" alt="Foto profil">
