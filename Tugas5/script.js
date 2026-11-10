@@ -1,4 +1,3 @@
-
 // Mengambil elemen dari HTML
 const form = document.getElementById("searchForm");
 const result = document.getElementById("result");
