@@ -1,7 +1,9 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <HelloWorld />
+  <nav>
+    <RouterLink to="/">Beranda</RouterLink>
+    |
+    <RouterLink to="/cart">Keranjang</RouterLink>
+  </nav>
+
+  <RouterView />
 </template>
