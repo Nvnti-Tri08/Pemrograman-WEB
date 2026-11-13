@@ -6,11 +6,11 @@ const cartStore = useCartStore()
 
 const products = [
   {id: 1,
-    nama: 'Canvas Tote Bag', harga: 65000},
+    nama: 'Canvas Tote Bag', harga: 65000, gambar: '/images/tote-bag.jpg'}, 
   {id: 2,
-    nama: 'Casual Sneakers', harga: 185000},
+    nama: 'Casual Sneakers', harga: 589000, gambar: '/images/sneakers.jpg'},
   {id: 3,
-    nama: 'Facial Cleanser', harga: 45000 }
+    nama: 'Facial Cleanser', harga: 35000, gambar: '/images/cleanser.jpg'}
 ]
 
 function handleAddToCart(product) {
@@ -19,7 +19,7 @@ function handleAddToCart(product) {
 </script>
 
 <template>
-  <h1>Welcome to EasyMart</h1>
+  <h1>Katalog Produk</h1>
 
   <div class="product-list">
     <ProductCard
