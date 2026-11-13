@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+
 export const useCartStore = defineStore('cart', {
     state: () => ({
         items: [],
@@ -26,9 +27,9 @@ export const useCartStore = defineStore('cart', {
     
     kurangiJumlah(index) {
         if (this.items[index].jumlah > 1) {
-        this.items[index].jumlah--
+          this.items[index].jumlah--
         } else {
-        this.items.splice(index, 1)
+          this.items.splice(index, 1)
   }
 }
     }

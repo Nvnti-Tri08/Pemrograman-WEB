@@ -64,7 +64,14 @@ h1 {
   background-color: #fff;
 }
 
-/* Tombol beli */
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Tombol */
 button {
   background-color: #78917b;
   color: white;
@@ -76,58 +83,6 @@ button {
 
 button:hover {
   background-color: #526b58;
-}
-
-
-/* Tampilan HP */
-@media (max-width: 600px) {
-
-  body {
-    overflow-x: hidden;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 12px;
-    padding: 15px;
-  }
-
-  .nav-menu {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  h1 {
-    font-size: 28px;
-    margin: 25px 0;
-  }
-
-  .product-list {
-    grid-template-columns: minmax(0, 1fr);
-    padding: 15px;
-    gap: 15px;
-  }
-
-  .product-card {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .product-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: contain;
-  }
-
-}
-
-/* Gambar produk */
-.product-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  margin-bottom: 15px;
 }
 
 /* Keranjang */
@@ -167,4 +122,43 @@ button:hover {
 
 .quantity span {
   font-weight: bold;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .nav-menu {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin: 25px 0;
+  }
+
+  .product-list {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .product-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .product-card img {
+    height: 180px;
+  }
 }

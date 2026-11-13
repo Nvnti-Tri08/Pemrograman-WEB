@@ -6,11 +6,11 @@ const cartStore = useCartStore()
 
 const products = [
   {id: 1,
-    nama: 'Canvas Tote Bag', harga: 65000, gambar: '/images/tote-bag.jpg'}, 
+    nama: 'Wireless Earphone', harga: 90000, gambar: '/images/earphone.jpg'}, 
   {id: 2,
-    nama: 'Casual Sneakers', harga: 589000, gambar: '/images/sneakers.jpg'},
+    nama: 'Casual Sneakers', harga: 689000, gambar: '/images/sneakers.jpg'},
   {id: 3,
-    nama: 'Facial Cleanser', harga: 52000, gambar: '/images/cleanser.jpg'}
+    nama: 'Daily Tumbler', harga: 550000, gambar: '/images/tumbler.jpg'}
 ]
 
 function handleAddToCart(product) {

@@ -19,8 +19,7 @@ function formatRupiah(angka) {
   <h1>Keranjang Belanja</h1>
 
   <div class="cart-container">
-
-  <div v-if="cartStore.items.length === 0">
+    <div v-if="cartStore.items.length === 0">
     <p>Keranjang masih kosong</p>
   </div>
 
@@ -32,15 +31,21 @@ function formatRupiah(angka) {
       >
         <div>
           <h3>{{ item.nama }}</h3>
+
           <p>Harga: Rp{{ formatRupiah(item.harga) }}</p>
+
           <div class="quantity">
             <button @click="cartStore.kurangiJumlah(index)">−</button>
 
             <span>{{ item.jumlah }}</span>
 
-            <button @click="item.jumlah++">+</button>
+            <button @click="item.jumlah++">
+              +
+            </button>
           </div>
+      
           <p>Subtotal: Rp{{ formatRupiah(item.harga * item.jumlah) }}</p>
+        
         </div>
 
       <button @click="cartStore.removeFromCart(index)">
