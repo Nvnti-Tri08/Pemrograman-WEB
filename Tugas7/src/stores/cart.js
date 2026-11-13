@@ -22,6 +22,14 @@ export const useCartStore = defineStore('cart', {
 
     removeFromCart(index) {
         this.items.splice (index, 1)
-        }
+        },
+    
+    kurangiJumlah(index) {
+        if (this.items[index].jumlah > 1) {
+        this.items[index].jumlah--
+        } else {
+        this.items.splice(index, 1)
+  }
+}
     }
 })

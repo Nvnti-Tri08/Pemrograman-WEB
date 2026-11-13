@@ -33,7 +33,13 @@ function formatRupiah(angka) {
         <div>
           <h3>{{ item.nama }}</h3>
           <p>Harga: Rp{{ formatRupiah(item.harga) }}</p>
-          <p>Jumlah: {{ item.jumlah }}</p>
+          <div class="quantity">
+            <button @click="cartStore.kurangiJumlah(index)">−</button>
+
+            <span>{{ item.jumlah }}</span>
+
+            <button @click="item.jumlah++">+</button>
+          </div>
           <p>Subtotal: Rp{{ formatRupiah(item.harga * item.jumlah) }}</p>
         </div>
 

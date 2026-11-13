@@ -10,7 +10,7 @@ const products = [
   {id: 2,
     nama: 'Casual Sneakers', harga: 589000, gambar: '/images/sneakers.jpg'},
   {id: 3,
-    nama: 'Facial Cleanser', harga: 35000, gambar: '/images/cleanser.jpg'}
+    nama: 'Facial Cleanser', harga: 52000, gambar: '/images/cleanser.jpg'}
 ]
 
 function handleAddToCart(product) {
