@@ -1,3 +1,4 @@
+
 <script setup>
 import { ref, computed } from 'vue'
 
@@ -9,7 +10,7 @@ const selesai = ref(false)
 // Menyimpan daftar buku
 const daftarBuku = ref([])
 
-// Menghitung jumlah buku yang selesai dibaca
+// Menghitung jumlah buku selesai dibaca
 const jumlahSelesai = computed(() => {
   return daftarBuku.value.filter(buku => buku.selesai).length
 })
@@ -41,37 +42,45 @@ function tambahBuku() {
 
     <!-- Form tambah buku -->
     <form @submit.prevent="tambahBuku">
-      <label>Judul Buku</label>
-      <input
-        v-model="judul"
-        type="text"
-        placeholder="Masukkan Judul Buku"
-      />
+      <div class="form-group">
+        <label>Judul Buku</label>
+        <input
+          v-model="judul"
+          type="text"
+          placeholder="Masukkan Judul Buku"
+        >
+      </div>
 
-      <label>Kategori Buku</label>
-      <select v-model="kategori">
-        <option value="">Pilih Kategori</option>
-        <option value="Novel">Novel</option>
-        <option value="Komik">Komik</option>
-        <option value="Pendidikan">Pendidikan</option>
-      </select>
+      <div class="form-group">
+        <label>Kategori Buku</label>
+        <select v-model="kategori">
+          <option value="">Pilih Kategori</option>
+          <option value="Novel">Novel</option>
+          <option value="Komik">Komik</option>
+          <option value="Pendidikan">Pendidikan</option>
+        </select>
+      </div>
 
-      <label>
-        <input v-model="selesai" type="checkbox" />
+      <label class="checkbox-group">
+        <input v-model="selesai" type="checkbox">
         Selesai dibaca
       </label>
 
       <button type="submit">Tambah Buku</button>
     </form>
 
-    <h3>Jumlah buku selesai dibaca: {{ jumlahSelesai }}</h3>
+    <!-- Jumlah buku selesai dibaca -->
+    <div class="statistik">
+      <h3>Jumlah buku selesai dibaca: {{ jumlahSelesai }}</h3>
+    </div>
 
+    <!-- Daftar buku -->
     <h2>Daftar Buku</h2>
 
     <div
-      class="buku-list"
       v-for="buku in daftarBuku"
       :key="buku.id"
+      class="buku-list"
     >
       <h3>{{ buku.judul }}</h3>
       <p>Kategori: {{ buku.kategori }}</p>
@@ -85,37 +94,57 @@ function tambahBuku() {
 <style scoped>
 /* Tampilan utama */
 .container {
-  max-width: 700px;
-  margin: 20px auto;
-  padding: 15px;
+  max-width: 750px;
+  margin: 25px auto;
+  padding: 25px;
   background-color: #fff9eb;
   text-align: center;
   font-size: 18px;
+  border-radius: 8px;
 }
 
 /* Judul aplikasi */
 h1 {
   background-color: #f2d58a;
   color: #59452b;
-  padding: 10px;
+  padding: 12px;
   font-size: 32px;
+  margin-bottom: 25px;
 }
 
-label {
+/* Form */
+form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
   display: block;
-  margin: 10px 0;
+  margin-bottom: 8px;
   font-size: 22px;
 }
 
 input[type="text"],
 select {
-  display: block;
-  margin: 8px auto;
-  padding: 10px;
+  width: 100%;
+  padding: 12px;
   font-size: 18px;
 }
 
 /* Checkbox */
+.checkbox-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+  font-size: 20px;
+}
+
 input[type="checkbox"] {
   accent-color: #b58b42;
 }
@@ -124,14 +153,27 @@ input[type="checkbox"] {
 button {
   background-color: #b58b42;
   color: white;
-  padding: 10px 15px;
+  padding: 12px 20px;
   border: none;
   font-size: 17px;
   cursor: pointer;
 }
 
-/* Judul daftar */
-h2, h3 {
+button:hover {
+  background-color: #967034;
+}
+
+/* Jumlah buku selesai dibaca */
+.statistik {
+  margin: 25px 0;
+  padding: 10px;
+  background-color: #f8edcf;
+  border-radius: 8px;
+}
+
+/* Judul bagian */
+h2,
+h3 {
   color: #80602f;
 }
 
@@ -145,8 +187,11 @@ h3 {
 
 /* Daftar buku */
 .buku-list {
-  padding: 10px 5px;
-  border-bottom: 1px solid #b58b42;
+  padding: 15px;
+  margin-bottom: 12px;
+  background-color: white;
+  border: 1px solid #e5d3a8;
+  border-radius: 8px;
 }
 
 .buku-list h3,
@@ -158,11 +203,19 @@ h3 {
   font-size: 18px;
 }
 
-/* Responsif */
+/* Tampilan HP */
 @media (max-width: 600px) {
   .container {
     margin: 10px;
-    padding: 10px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .form-group label {
+    font-size: 19px;
   }
 
   input[type="text"],
