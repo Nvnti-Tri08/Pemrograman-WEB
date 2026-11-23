@@ -1,0 +1,9 @@
+POST http://127.0.0.1:8787/api/inventaris
+Content-Type: application/json
+
+{
+    "nama": "Keyboard",
+    "jumlah": 10,
+    "kondisi": "Baru",
+    "lokasi": "Lab Komputer"
+}
