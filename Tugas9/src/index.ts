@@ -14,4 +14,15 @@ app.get('/api/inventaris', (c) => {
   return c.json(inventaris)
 })
 
+app.get('/api/inventaris/:id', (c) => {
+  const id = Number(c.req.param('id'))
+  const barang = inventaris.find((item) => item.id === id)
+
+  if (!barang) {
+    return c.json({ error: 'Barang tidak ditemukan' }, 404)
+  }
+  
+  return c.json(barang)
+})
+
 export default app
