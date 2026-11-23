@@ -25,4 +25,17 @@ app.get('/api/inventaris/:id', (c) => {
   return c.json(barang)
 })
 
+app.post('/api/inventaris', async (c) => {
+  const data = await c.req.json()
+
+  const newBarang = {
+    id : inventaris.length + 1,
+    ... data
+  }
+
+  inventaris.push(newBarang)
+
+  return c.json(newBarang, 201)
+})
+
 export default app
