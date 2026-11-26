@@ -7,11 +7,15 @@
       </RouterLink>
 
       <nav class="nav-menu">
-        <RouterLink to="/">Beranda</RouterLink>
-        <RouterLink to="/tentang">Tentang</RouterLink>
-        <RouterLink to="/proyek">Proyek</RouterLink>
-        <RouterLink to="/kontak">Kontak</RouterLink>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/tentang">About</RouterLink>
+        <RouterLink to="/proyek">Projects</RouterLink>
+        <RouterLink to="/kontak">Contact</RouterLink>
       </nav>
+
+      <RouterLink to="/kontak" class="nav-button">
+        Contact Me ↗
+      </RouterLink>
 
       <RouterLink to="/kontak" class="nav-button">
         Hubungi Saya ↗
