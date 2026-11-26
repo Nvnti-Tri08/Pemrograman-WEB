@@ -17,9 +17,6 @@
         Contact Me ↗
       </RouterLink>
 
-      <RouterLink to="/kontak" class="nav-button">
-        Hubungi Saya ↗
-      </RouterLink>
     </div>
   </header>
 </template>
