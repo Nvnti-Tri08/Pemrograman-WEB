@@ -1,3 +1,8 @@
+<script setup>
+import { useThemeStore } from '../stores/theme'
+
+const themeStore = useThemeStore()
+</script>
 
 <template>
   <header class="navbar">
@@ -13,9 +18,18 @@
         <RouterLink to="/kontak">Contact</RouterLink>
       </nav>
 
-      <RouterLink to="/kontak" class="nav-button">
-        Contact Me ↗
-      </RouterLink>
+      <div class="nav-actions">
+        <button
+          class="theme-button"
+          @click="themeStore.toggleTheme()"
+        >
+          {{ themeStore.theme === 'light' ? '☾' : '☀' }}
+        </button>
+
+        <RouterLink to="/kontak" class="nav-button">
+          Contact Me ↗
+        </RouterLink>
+      </div>
 
     </div>
   </header>
@@ -75,6 +89,28 @@
 .nav-button:hover {
   background: var(--color-accent);
   color: white;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.theme-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-button:hover {
+  background: var(--bg-secondary);
 }
 
 @media (max-width: 600px) {
