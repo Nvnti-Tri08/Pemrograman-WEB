@@ -1,0 +1,88 @@
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Light Theme */
+:root {
+  --bg-primary: #E9DED0;
+  --bg-secondary: #F7F2EC;
+  --bg-dark: #302019;
+
+  --text-primary: #302019;
+  --text-secondary: #806957;
+
+  --color-accent: #713B28;
+  --color-muted: #C4AD96;
+  --color-border: #D4C2AF;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+/* Dark Theme */
+.dark {
+  --bg-primary: #211914;
+  --bg-secondary: #30241D;
+  --bg-dark: #17110E;
+
+  --text-primary: #F7F2EC;
+  --text-secondary: #C4AD96;
+
+  --color-accent: #C18B6C;
+  --color-muted: #98745C;
+  --color-border: #514035;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
