@@ -1,26 +1,29 @@
+
 <template>
   <section class="about container">
     <div class="section-heading">
       <p class="subtitle">GET TO KNOW ME</p>
       <h1>About <span>Me.</span></h1>
       <p class="intro">
-        A little introduction about who I am, my journey,
-        and what I am passionate about.
+        Get to know more about my background, education,
+        and the skills I have learned along the way.
       </p>
     </div>
 
     <div class="about-content">
       <div class="about-text">
-        <h2>Hello, I'm Asa!</h2>
+        <h2>Hello, I'm Salsabila Tri Novianti!</h2>
         <p>
           I am an Informatics Engineering student at
-          Universitas Yudharta Pasuruan. I have an educational
-          background in Computer and Network Engineering
-          and an interest in technology and web development.
+          Universitas Yudharta Pasuruan. Before continuing
+          my studies, I graduated from vocational high school
+          majoring in Computer and Network Engineering.
         </p>
         <p>
-          I enjoy learning new things, exploring ideas,
-          and improving my skills through projects and practice.
+          Through my education, I have learned the basics of
+          programming, database management, and computer
+          networking. I enjoy gaining new knowledge and
+          improving my abilities through learning and practice.
         </p>
       </div>
 
@@ -42,16 +45,47 @@
     </div>
 
     <div class="skills">
-      <p class="subtitle">WHAT I LEARN</p>
-      <h2>My Skills & Interests</h2>
+      <p class="subtitle">WHAT I HAVE LEARNED</p>
+      <h2>Knowledge & Skills</h2>
 
       <div class="skill-list">
+        <span>Basic Programming</span>
         <span>HTML & CSS</span>
         <span>JavaScript</span>
-        <span>Vue.js</span>
+        <span>Python</span>
+        <span>Database Management</span>
         <span>Computer Networking</span>
-        <span>Database</span>
         <span>Problem Solving</span>
+      </div>
+    </div>
+    
+    <div class="experience">
+      <p class="subtitle">PRACTICAL EXPERIENCE</p>
+      <h2>Experience</h2>
+
+      <div class="experience-card">
+        <div class="experience-header">
+          <span class="experience-tag">INTERNSHIP</span>
+          <span class="experience-date">JUL — DEC 2024</span>
+        </div>
+
+        <h3>Buluagung Jaya Computer (BJC)</h3>
+        <p class="experience-location">
+          Purwosari, Pasuruan
+        </p>
+
+        <div class="experience-divider"></div>
+
+        <h4>Activities & Responsibilities</h4>
+
+        <div class="experience-list">
+          <span>Computer & Laptop Repair</span>
+          <span>Windows Installation</span>
+          <span>CCTV Installation</span>
+          <span>Device Maintenance</span>
+          <span>Customer Service</span>
+          <span>Computer Accessories Sales</span>
+        </div>
       </div>
     </div>
   </section>
@@ -156,5 +190,72 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+}
+
+.experience {
+  margin-top: 90px;
+  margin-bottom: 40px;
+}
+
+.experience h2 {
+  margin-top: 18px;
+  margin-bottom: 28px;
+}
+
+.experience-card {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.experience-tag {
+  color: var(--color-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.experience-date {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.experience-card h3 {
+  margin-bottom: 8px;
+}
+
+.experience-location {
+  color: var(--text-secondary);
+}
+
+.experience-divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 24px 0;
+}
+
+.experience-card h4 {
+  margin-bottom: 18px;
+}
+
+.experience-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.experience-list span {
+  padding: 10px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 30px;
+  font-size: 14px;
 }
 </style>
