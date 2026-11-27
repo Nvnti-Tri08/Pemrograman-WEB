@@ -7,9 +7,6 @@ const themeStore = useThemeStore()
 <template>
   <header class="navbar">
     <div class="container navbar-content">
-      <RouterLink to="/" class="logo">
-        Asa<span>.</span>
-      </RouterLink>
 
       <nav class="nav-menu">
         <RouterLink to="/">Home</RouterLink>

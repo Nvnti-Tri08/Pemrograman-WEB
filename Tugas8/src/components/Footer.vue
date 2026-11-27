@@ -3,7 +3,6 @@
   <footer class="footer">
     <div class="container footer-content">
       <div>
-        <h2>Asa<span>.</span></h2>
         <p>Creating with purpose, growing with passion.</p>
       </div>
 

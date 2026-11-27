@@ -13,8 +13,10 @@
       </h1>
 
       <p class="description">
-        I am a student who is passionate about technology,
-        creativity, and continuously learning new things.
+        An Informatics Engineering student with a background
+        in Computer and Network Engineering. I have basic
+        knowledge of programming, databases, and computer
+        networking. Always eager to learn and improve.
       </p>
 
       <div class="hero-buttons">
@@ -30,7 +32,7 @@
 
     <div class="hero-image">
       <div class="image-placeholder">
-        <span>YOUR PHOTO</span>
+        <img src="../assets/Asa.jpeg" alt="Foto Asa" />
       </div>
       <p>Based in Indonesia · Always Learning</p>
     </div>
@@ -38,6 +40,18 @@
 </template>
 
 <style scoped>
+.image-placeholder {
+  border-radius: 210px 210px 12px 12px;
+  overflow: hidden;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .hero {
   min-height: 75vh;
   display: flex;
@@ -111,7 +125,7 @@ h1 span {
 }
 
 .hero-image {
-  text-align: center;
+  transform: translateX(-60px);
 }
 
 .image-placeholder {
@@ -150,4 +164,5 @@ h1 span {
     height: 310px;
   }
 }
+
 </style>
